@@ -1,10 +1,19 @@
+#define DEBUG_MODE
 #include "gost_3412_2015_calc.h"
 #include "test.h"
+#include "hexdump.h"
 
 int main(int argc, char *argv[]) {
-  vect gipher_blk;
+  vect cipher_blk;
+  vect decipher_blk;
   GOST_Kuz_Expand_Key(test_key);
-  GOST_Kuz_Encrypt(encrypt_test_string, gipher_blk);
-  GOST_Kuz_Decrypt(decrypt_test_string, gipher_blk);
+  printf("PLAIN\n");
+  hexDump((unsigned char *)encrypt_test_string, 16);
+  GOST_Kuz_Encrypt((unsigned char *)encrypt_test_string, cipher_blk);
+  printf("CIPHER\n");
+  hexDump((unsigned char *)cipher_blk, 16);
+  GOST_Kuz_Decrypt(cipher_blk, decipher_blk);
+  printf("DECIPHERED\n");
+  hexDump((unsigned char *)decipher_blk, 16);
   return 0;
 }

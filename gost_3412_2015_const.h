@@ -84,4 +84,4 @@ static const unsigned char l_vec[16] = {
   251, 1, 192, 194, 16, 133, 32, 148
 };
 
-#endif  // GOST_3412_2015_CONST_H
+#endif // GOST_3412_2015_CONST_H
