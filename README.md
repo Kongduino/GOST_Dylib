@@ -2,6 +2,8 @@
 
 A ГОСТ 34.12 - 2015 cipher dynamic library for use with Python, Xojo, etc... like my [Chacha20_Dylib](https://github.com/Kongduino/Chacha20_Dylib), [Blowfish_Dylib](https://github.com/Kongduino/Blowfish_Dylib) and [SHA3_Dylib](https://github.com/Kongduino/SHA3_Dylib). It's based on [kuznechik](https://github.com/drobotun/kuznechik).
 
+The library currently encrypts only a block, I'll have to add padding and `GOST_Kuz_Encrypt_Buffer` / `GOST_Kuz_Decrypt_Buffer`.
+
 ```
 $ make
 gcc -Ofast -g   -c -o gost_3412_2015_calc.o gost_3412_2015_calc.c
