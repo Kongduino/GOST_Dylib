@@ -6,8 +6,8 @@ The library currently encrypts only a block, I'll have to add padding and `GOST_
 
 ```
 $ make
-gcc -Ofast -g   -c -o gost_3412_2015_calc.o gost_3412_2015_calc.c
-gcc -Ofast -g   -c -o main.o main.c
+gcc -Ofast -g -c -o gost_3412_2015_calc.o gost_3412_2015_calc.c
+gcc -Ofast -g -c -o main.o main.c
 gcc -Ofast -g *.c
 gcc -dynamiclib gost_3412_2015_calc.o -o kuznechik.dylib
 gcc *.o -o kuznechik_test
