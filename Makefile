@@ -7,7 +7,7 @@ CFLAGS = -Ofast -g
 OBJS =  gost_3412_2015_calc.o main.o
 
 # the list of files to clean
-TOCLEAN = kuznechik.dylib $(OBJS) *.out
+TOCLEAN = kuznechik.dylib $(OBJS) *.out kuznechik_test
 
 RM ?= rm -f
 
