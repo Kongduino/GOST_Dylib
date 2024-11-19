@@ -2,7 +2,7 @@
 
 A ГОСТ 34.12 - 2015 cipher dynamic library for use with Python, Xojo, etc... like my [Chacha20_Dylib](https://github.com/Kongduino/Chacha20_Dylib), [Blowfish_Dylib](https://github.com/Kongduino/Blowfish_Dylib) and [SHA3_Dylib](https://github.com/Kongduino/SHA3_Dylib). It's based on [kuznechik](https://github.com/drobotun/kuznechik).
 
-There are three examples: a regular [C example](main.c), a [Python example](./Python/) and 2 Arduino examples: [Kuznechik_Test](./Arduino/Kuznechik_Test/) and [Kuznechik_OLED](./Arduino/Kuznechik_OLED) (which is specific to the RAK19260).
+There are four examples: a regular [C example](main.c), a [Python example](./Python/), 2 Arduino examples: [Kuznechik_Test](./Arduino/Kuznechik_Test/) and [Kuznechik_OLED](./Arduino/Kuznechik_OLED) (which is specific to the RAK19260), and a [Xojo example](./Xojo/).
 
 The library currently encrypts only a block, I'll have to add padding and `GOST_Kuz_Encrypt_Buffer` / `GOST_Kuz_Decrypt_Buffer`.
 
