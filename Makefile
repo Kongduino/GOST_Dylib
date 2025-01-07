@@ -1,13 +1,13 @@
 .POSIX:
 TARGET = kuznechik
 CC = gcc
-CFLAGS = -Ofast -g
+CFLAGS = -Ofast -g -c
 
 # The list of object files.
 OBJS =  gost_3412_2015_calc.o main.o
 
 # the list of files to clean
-TOCLEAN = kuznechik.dylib $(OBJS) *.out kuznechik_test
+TOCLEAN = kuznechik.dylib $(OBJS) *.out kuznechik_test silent
 
 RM ?= rm -f
 
@@ -19,10 +19,10 @@ clean:
 kuznechik: $(OBJS)
 	$(CC) $(CFLAGS) *.c
 	$(CC) -dynamiclib gost_3412_2015_calc.o -o $(TARGET).dylib
-	$(CC) *.o -o kuznechik_test
-	rm *.o a.out
-	rm -rf a.out.dSYM
+	$(CC) silent.o gost_3412_2015_calc.o -o silent
+	$(CC) main.o gost_3412_2015_calc.o -o kuznechik_test
 	./kuznechik_test
+	time ./silent
 	cd Python ; ./Test.py
 
 install:
