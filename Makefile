@@ -21,6 +21,8 @@ kuznechik: $(OBJS)
 	$(CC) -dynamiclib gost_3412_2015_calc.o -o $(TARGET).dylib
 	$(CC) silent.o gost_3412_2015_calc.o -o silent
 	$(CC) main.o gost_3412_2015_calc.o -o kuznechik_test
+
+test:
 	./kuznechik_test
 	time ./silent
 	cd Python ; ./Test.py
