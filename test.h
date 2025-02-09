@@ -19,4 +19,3 @@ static const unsigned char decrypt_test_string[16] = {
 };
 
 #endif  // TEST_H
-
